@@ -28,7 +28,7 @@
 
 ### OSUNA ENCISO PABLO ALEJANDRO 16210279
 
-### ORTIZ SANCHEZ REBECA 
+### ORTIZ SANCHEZ MARTHA REBECA 15212340
 
 ### SUSANO SANCHEZ IVAN ALFONSO 16210580
 
@@ -68,6 +68,11 @@ Ahora, para entrenar a estos tres clasificadores, necesitamos crear tres conjunt
 ![1_1BX5o_mIzPoVI1ad2xbyEg](https://i.imgur.com/GbNs3vL.png)
 
 Se puede ver que hay tres etiquetas de clase, **Verde, Azul y Rojo**  presentes en el conjunto de datos. 
+
+
+## Ejemplo
+
+
 
 ## Conclusión 
 Nos ayuda mucho el usar el one-vs-Rest para realizar una clasificaion de clases multiples ya que se nos facilita mucho con su funcionamiento optimo.  
