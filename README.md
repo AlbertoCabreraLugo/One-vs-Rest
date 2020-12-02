@@ -42,8 +42,10 @@
 
 # Uno contra todos 
 ## Introducción
+
+También conocida como uno contra todos, esta estrategia consiste en ajustar un clasificador por clase. Para cada clasificador, la clase se ajusta a todas las demás clases. Además de su eficiencia computacional (solo se necesitan clasificadores n_classes), una ventaja de este enfoque es su interpretabilidad. Dado que cada clase está representada por uno y solo un clasificador, es posible obtener conocimiento sobre la clase inspeccionando su clasificador correspondiente. Ésta es la estrategia más utilizada para la clasificación multiclase y es una opción justa por defecto.
  
-OneVsRest es un ejemplo de una reducción de aprendizaje automático para realizar una clasificación multiclase dado un clasificador base que puede realizar una clasificación binaria de manera eficiente. También se conoce como "Uno contra todos".
+OneVsRest es un ejemplo de una reducción de aprendizaje automático para realizar una clasificación multiclase dado un clasificador base que puede realizar una clasificación binaria de manera eficiente.
 
 OneVsRest se implementa como un Estimador. Para el clasificador base, toma instancias de Classifier y crea un problema de clasificación binaria para cada una de las k clases. El clasificador de la clase i está entrenado para predecir si la etiqueta es i o no, distinguiendo la clase i de todas las demás clases.
 
@@ -75,4 +77,4 @@ Se puede ver que hay tres etiquetas de clase, **Verde, Azul y Rojo**  presentes 
 
 
 ## Conclusión 
-Nos ayuda mucho el usar el one-vs-Rest para realizar una clasificaion de clases multiples ya que se nos facilita mucho con su funcionamiento optimo.  
+Este metodo de clsaificacion nos ayuda bastante cuando tenemos un modelo de pocas clases, pero puede presentar errores de prediccion cuando la cantidad de clases es muy grande, pudimos observar como trabaja este algoritmo realizando clasificacion binaria cuando es un algoritmo de multiclase y ahora podemos conocer sus ventajas, como sus desventajas en su uso. 
