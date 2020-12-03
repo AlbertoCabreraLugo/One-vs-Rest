@@ -71,10 +71,29 @@ Ahora, para entrenar a estos tres clasificadores, necesitamos crear tres conjunt
 
 Se puede ver que hay tres etiquetas de clase, **Verde, Azul y Rojo**  presentes en el conjunto de datos. 
 
+## Aplicación One vs Rest
 
-## Ejemplo
+### Redes neuronales
+Los perceptrones multiclase proporcionan una extensión natural al problema multiclase. En lugar de tener sólo una neurona en la capa de salida, con salida binaria, uno podría tener N neuronas binarias que conducen a la clasificación de varias clases. En la práctica, la última capa de una red neuronal suele ser una capa de función softmax, que es la simplificación algebraica de N clasificadores logísticos, normalizada por clase por la suma de los N-1 otros clasificadores logísticos.
 
+### Máquinas de aprendizaje extremo
+Las máquinas de aprendizaje extremo (ELM) son un caso especial de redes neuronales de avance de alimentación de capa única (SLFN) donde en los pesos de entrada y los sesgos de nodo oculto se pueden elegir al azar. Muchas variantes y desarrollos se hacen al ELM para la clasificación multiclase.
+
+### k-nearest neighbours
+k-nearest neighbours kNN se considera uno de los algoritmos de clasificación no paramétricos más antiguos. Para clasificar un ejemplo desconocido, se mide la distancia de ese ejemplo a cualquier otro ejemplo de entrenamiento. Se identifican las distancias más pequeñas k, y la clase más representada por estos vecinos más cercanos k se considera la etiqueta de clase de salida.
+
+### Naive Bayes
+Naive Bayes es un clasificador exitoso basado en el principio de máximo a posteriori (MAP). Este enfoque es naturalmente extensible al caso de tener más de dos clases, y se demostró que funciona bien a pesar de la asunción de simplificación subyacente de la independencia condicional.
+
+### Arboles
+El aprendizaje de árbol de decisiones es una técnica de clasificación poderosa. El árbol intenta inferir una división de los datos de entrenamiento en función de los valores de las entidades disponibles para producir una buena generalización. El algoritmo puede controlar naturalmente los problemas de clasificación binaria o multiclase. Los nodos hoja pueden hacer referencia a cualquiera de las clases K en cuestión.
+
+### Máquinas vectoriales de soporte
+Las máquinas vectoriales de soporte se basan en la idea de maximizar el margen, es decir, maximizar la distancia mínima desde el hiperplano de separación hasta el ejemplo más cercano. La SVM básica solo admite la clasificación binaria, pero también se han propuesto extensiones para manejar el caso de clasificación multiclase. En estas extensiones, se agregan parámetros y restricciones adicionales al problema de optimización para controlar la separación de las diferentes clases.
+
+### Clasificación jerárquica
+La clasificación jerárquica aborda el problema de clasificación multisome de clase dividiendo el espacio de salida, es decir, en un árbol. Cada nodo primario se divide en varios nodos secundarios y el proceso se continúa hasta que cada nodo secundario representa solo una clase. Se han propuesto varios métodos basados en la clasificación jerárquica.
 
 
 ## Conclusión 
-Este metodo de clsaificacion nos ayuda bastante cuando tenemos un modelo de pocas clases, pero puede presentar errores de prediccion cuando la cantidad de clases es muy grande, pudimos observar como trabaja este algoritmo realizando clasificacion binaria cuando es un algoritmo de multiclase y ahora podemos conocer sus ventajas, como sus desventajas en su uso. 
+Este metodo de clasificacion nos ayuda bastante cuando tenemos un modelo de pocas clases, pero puede presentar errores de prediccion cuando la cantidad de clases es muy grande, pudimos observar como trabaja este algoritmo realizando clasificacion binaria cuando es un algoritmo de multiclase y ahora podemos conocer sus ventajas, como sus desventajas en su uso. 
